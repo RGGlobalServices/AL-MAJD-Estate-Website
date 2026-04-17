@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Georgia", serif;
+  
+  --color-paper: #F8F7F4;
+  --color-ink: #1C1C1C;
+  --color-gold: #A6894A;
+  --color-accent: #E5E1D8;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  @apply font-sans;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, .serif {
+  @apply font-serif;
+}
+
+.ornament {
+  height: 1px;
+  background: var(--color-gold);
+  width: 40px;
+  margin: 15px 0;
+}
